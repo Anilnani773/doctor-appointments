@@ -17,24 +17,33 @@ const Login = () => {
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
+    console.log("Form submitted, state:", state);
+    console.log("Backend URL:", backendUrl);
+    console.log("Form data:", { name, email, password });
+    
     try {
       if (state === "Sign Up") {
+        console.log("Attempting to register user...");
         const { data } = await axios.post(backendUrl + "/api/user/register", {
           name,
           password,
           email,
         });
+        console.log("Registration response:", data);
         if (data.success) {
           localStorage.setItem("token", data.token);
           setToken(data.token);
+          toast.success("Account created successfully!");
         } else {
           toast.error(data.message);
         }
       } else {
+        console.log("Attempting to login user...");
         const { data } = await axios.post(backendUrl + "/api/user/login", {
           password,
           email,
         });
+        console.log("Login response:", data);
         if (data.success) {
           localStorage.setItem("token", data.token);
           setToken(data.token);
@@ -44,7 +53,9 @@ const Login = () => {
         }
       }
     } catch (error) {
-      toast.error(error.message);
+      console.error("API Error:", error);
+      console.error("Error details:", error.response?.data || error.message);
+      toast.error(error.response?.data?.message || error.message || "An error occurred");
     }
   };
 

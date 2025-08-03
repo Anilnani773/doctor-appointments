@@ -10,7 +10,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://doctor-appointments-3.onrender.com";
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
   const { setDToken } = useContext(DoctorContext);
   const { setAToken } = useContext(AdminContext);
