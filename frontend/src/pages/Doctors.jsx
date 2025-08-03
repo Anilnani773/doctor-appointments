@@ -28,9 +28,15 @@ const Doctors = () => {
 
   // Handle image loading errors
   const handleImageError = (e) => {
+    console.log('Image failed to load:', e.target.src);
     // Use a placeholder image when the original fails to load
     e.target.src = 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face';
     e.target.onerror = null; // Prevent infinite loop
+  };
+
+  // Handle image loading success
+  const handleImageLoad = (e) => {
+    console.log('Image loaded successfully:', e.target.src);
   };
 
   return (
@@ -65,6 +71,7 @@ const Doctors = () => {
                   src={item.image} 
                   alt={item.name}
                   onError={handleImageError}
+                  onLoad={handleImageLoad}
                 />
                 <div className="p-4">
                   <div className="flex items-center gap-2 text-sm text-center text-green-500">
