@@ -11,6 +11,25 @@ const Appointment = () => {
   const { doctors, currencySymbol, backendUrl, token, getDoctorsData } =
     useContext(AppContext);
 
+  // Helper function to get doctor image with fallback
+  const getDoctorImage = (docInfo) => {
+    if (!docInfo || !docInfo.image) {
+      return '/doctors/doc1.png';
+    }
+    
+    // If it's already a full URL or public path, use it as is
+    if (docInfo.image.startsWith('http') || docInfo.image.startsWith('/')) {
+      return docInfo.image;
+    }
+    
+    // If it's just a filename, assume it's in the doctors folder
+    if (docInfo.image.includes('doc')) {
+      return `/doctors/${docInfo.image}`;
+    }
+    
+    return docInfo.image;
+  };
+
   const navigate = useNavigate();
 
   const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
@@ -144,8 +163,13 @@ const Appointment = () => {
           <div>
             <img
               className="bg-primary w-full sm:max-w-72 rounded-lg"
-              src={docInfo.image}
+              src={getDoctorImage(docInfo)}
               alt={docInfo.name}
+              onError={(e) => {
+                console.log('Image failed to load:', docInfo.image);
+                // Fallback to a default image or placeholder
+                e.target.src = '/doctors/doc1.png';
+              }}
             />
           </div>
           <div className="flex-1 border border-gray-400 rounded-lg p-8 py-7 bg-white mx-2 sm:mx-0 mt-[-80px] sm:mt-0">
