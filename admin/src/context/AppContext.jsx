@@ -6,7 +6,7 @@ export const AppContext = createContext()
 const AppContextProvider = (props) => {
 
     const currency = import.meta.env.VITE_CURRENCY
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000"
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://doctor-appointments-3.onrender.com"
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
