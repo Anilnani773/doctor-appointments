@@ -26,6 +26,12 @@ const Doctors = () => {
     applyFilter()
   }, [doctors, speciality])
 
+  // Handle image loading errors
+  const handleImageError = (e) => {
+    // Use a placeholder image when the original fails to load
+    e.target.src = 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face';
+    e.target.onerror = null; // Prevent infinite loop
+  };
 
   return (
     <div>
@@ -54,7 +60,12 @@ const Doctors = () => {
                 className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
                 key={index}
               >
-                <img className="bg-blue-50" src={item.image} alt="" />
+                <img 
+                  className="bg-blue-50 w-full h-48 object-cover" 
+                  src={item.image} 
+                  alt={item.name}
+                  onError={handleImageError}
+                />
                 <div className="p-4">
                   <div className="flex items-center gap-2 text-sm text-center text-green-500">
                     <p className="w-2 h-2 bg-green-500 rounded-full"></p>
