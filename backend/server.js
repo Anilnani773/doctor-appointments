@@ -35,8 +35,11 @@ connectCloudinary();
 app.use(express.json());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-frontend-domain.vercel.app', 'https://your-admin-domain.vercel.app']
-    : ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:5174'],
+    ? [
+        'https://doctor-appointments-qz6y.vercel.app',
+        'https://doctor-appointments-admin.vercel.app'
+      ]
+    : true, // Allow all origins in development
   credentials: true
 }));
 
