@@ -13,7 +13,14 @@ dotenv.config();
 
 // Debug: Check environment variables
 console.log("Environment check:");
-console.log("NODE_ENV:", process.env.NODE_ENV);
+console.log("NODE_ENV:", process.env.NODE_ENV || 'development');
+
+// Set fallback JWT_SECRET for development
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = "your_jwt_secret_key_for_development_only_change_in_production";
+  console.log("Using fallback JWT_SECRET for development");
+}
+
 console.log("JWT_SECRET exists:", !!process.env.JWT_SECRET);
 console.log("JWT_SECRET length:", process.env.JWT_SECRET ? process.env.JWT_SECRET.length : 0);
 console.log("MONGODB_URI exists:", !!process.env.MONGODB_URI);
