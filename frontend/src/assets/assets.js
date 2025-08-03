@@ -13,7 +13,23 @@ import verified_icon from './verified_icon.svg'
 import arrow_icon from './arrow_icon.svg'
 import info_icon from './info_icon.svg'
 import upload_icon from './upload_icon.png'
+import stripe_logo from './stripe_logo.png'
 import razorpay_logo from './razorpay_logo.png'
+import doc1 from './doc1.png'
+import doc2 from './doc2.png'
+import doc3 from './doc3.png'
+import doc4 from './doc4.png'
+import doc5 from './doc5.png'
+import doc6 from './doc6.png'
+import doc7 from './doc7.png'
+import doc8 from './doc8.png'
+import doc9 from './doc9.png'
+import doc10 from './doc10.png'
+import doc11 from './doc11.png'
+import doc12 from './doc12.png'
+import doc13 from './doc13.png'
+import doc14 from './doc14.png'
+import doc15 from './doc15.png'
 import Dermatologist from './Dermatologist.svg'
 import Gastroenterologist from './Gastroenterologist.svg'
 import General_physician from './General_physician.svg'
@@ -38,6 +54,7 @@ export const assets = {
     cross_icon,
     dropdown_icon,
     upload_icon,
+    stripe_logo,
     razorpay_logo
 }
 
@@ -70,9 +87,9 @@ export const specialityData = [
 
 export const doctors = [
     {
-        _id: '507f1f77bcf86cd799439011',
+        _id: 'doc1',
         name: 'Dr. Richard James',
-        image: '/doctors/doc1.png',
+        image: doc1,
         speciality: 'General physician',
         degree: 'MBBS',
         experience: '4 Years',
@@ -81,13 +98,12 @@ export const doctors = [
         address: {
             line1: '17th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439012',
+        _id: 'doc2',
         name: 'Dr. Emily Larson',
-        image: '/doctors/doc2.png',
+        image: doc2,
         speciality: 'Gynecologist',
         degree: 'MBBS',
         experience: '3 Years',
@@ -96,13 +112,12 @@ export const doctors = [
         address: {
             line1: '27th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439013',
+        _id: 'doc3',
         name: 'Dr. Sarah Patel',
-        image: '/doctors/doc3.png',
+        image: doc3,
         speciality: 'Dermatologist',
         degree: 'MBBS',
         experience: '1 Years',
@@ -111,13 +126,12 @@ export const doctors = [
         address: {
             line1: '37th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439014',
+        _id: 'doc4',
         name: 'Dr. Christopher Lee',
-        image: '/doctors/doc4.png',
+        image: doc4,
         speciality: 'Pediatricians',
         degree: 'MBBS',
         experience: '2 Years',
@@ -126,13 +140,12 @@ export const doctors = [
         address: {
             line1: '47th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439015',
+        _id: 'doc5',
         name: 'Dr. Jennifer Garcia',
-        image: '/doctors/doc5.png',
+        image: doc5,
         speciality: 'Neurologist',
         degree: 'MBBS',
         experience: '4 Years',
@@ -141,13 +154,12 @@ export const doctors = [
         address: {
             line1: '57th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439016',
+        _id: 'doc6',
         name: 'Dr. Andrew Williams',
-        image: '/doctors/doc6.png',
+        image: doc6,
         speciality: 'Neurologist',
         degree: 'MBBS',
         experience: '4 Years',
@@ -156,13 +168,12 @@ export const doctors = [
         address: {
             line1: '57th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439017',
+        _id: 'doc7',
         name: 'Dr. Christopher Davis',
-        image: '/doctors/doc7.png',
+        image: doc7,
         speciality: 'General physician',
         degree: 'MBBS',
         experience: '4 Years',
@@ -171,13 +182,12 @@ export const doctors = [
         address: {
             line1: '17th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439018',
+        _id: 'doc8',
         name: 'Dr. Timothy White',
-        image: '/doctors/doc8.png',
+        image: doc8,
         speciality: 'Gynecologist',
         degree: 'MBBS',
         experience: '3 Years',
@@ -186,13 +196,12 @@ export const doctors = [
         address: {
             line1: '27th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439019',
+        _id: 'doc9',
         name: 'Dr. Ava Mitchell',
-        image: '/doctors/doc9.png',
+        image: doc9,
         speciality: 'Dermatologist',
         degree: 'MBBS',
         experience: '1 Years',
@@ -201,13 +210,12 @@ export const doctors = [
         address: {
             line1: '37th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439020',
+        _id: 'doc10',
         name: 'Dr. Jeffrey King',
-        image: '/doctors/doc10.png',
+        image: doc10,
         speciality: 'Pediatricians',
         degree: 'MBBS',
         experience: '2 Years',
@@ -216,13 +224,12 @@ export const doctors = [
         address: {
             line1: '47th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439021',
+        _id: 'doc11',
         name: 'Dr. Zoe Kelly',
-        image: '/doctors/doc11.png',
+        image: doc11,
         speciality: 'Neurologist',
         degree: 'MBBS',
         experience: '4 Years',
@@ -231,13 +238,12 @@ export const doctors = [
         address: {
             line1: '57th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439022',
+        _id: 'doc12',
         name: 'Dr. Patrick Harris',
-        image: '/doctors/doc12.png',
+        image: doc12,
         speciality: 'Neurologist',
         degree: 'MBBS',
         experience: '4 Years',
@@ -246,13 +252,12 @@ export const doctors = [
         address: {
             line1: '57th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439023',
+        _id: 'doc13',
         name: 'Dr. Chloe Evans',
-        image: '/doctors/doc13.png',
+        image: doc13,
         speciality: 'General physician',
         degree: 'MBBS',
         experience: '4 Years',
@@ -261,13 +266,12 @@ export const doctors = [
         address: {
             line1: '17th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439024',
+        _id: 'doc14',
         name: 'Dr. Ryan Martinez',
-        image: '/doctors/doc14.png',
+        image: doc14,
         speciality: 'Gynecologist',
         degree: 'MBBS',
         experience: '3 Years',
@@ -276,13 +280,12 @@ export const doctors = [
         address: {
             line1: '27th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
+        }
     },
     {
-        _id: '507f1f77bcf86cd799439025',
+        _id: 'doc15',
         name: 'Dr. Amelia Hill',
-        image: '/doctors/doc15.png',
+        image: doc15,
         speciality: 'Dermatologist',
         degree: 'MBBS',
         experience: '1 Years',
@@ -291,7 +294,6 @@ export const doctors = [
         address: {
             line1: '37th Cross, Richmond',
             line2: 'Circle, Ring Road, London'
-        },
-        slots_booked: {}
-    },
+}
+},
 ]
