@@ -1,0 +1,21 @@
+{
+  "name": "medical-bookings",
+  "version": "1.0.0",
+  "description": "Medical booking system with backend, frontend, and admin panel",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ../admin && npm install",
+    "build-all": "cd frontend && npm run build && cd ../admin && npm run build",
+    "start-backend": "cd backend && npm start",
+    "start-frontend": "cd frontend && npx serve -s dist -l $PORT",
+    "start-admin": "cd admin && npx serve -s dist -l $PORT",
+    "dev": "concurrently \"npm run start-backend\" \"npm run start-frontend\" \"npm run start-admin\""
+  },
+  "keywords": ["medical", "booking", "appointment", "healthcare"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
