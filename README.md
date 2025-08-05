@@ -3,7 +3,7 @@
 # Medicare Web App
 
 ## Project Overview  
-As part of my graduation at **SAIL Innovation Lab** for the completion of the **Fullstack Web Development program**, I developed a Medicare Web App. This project aimed to streamline the process of booking and managing doctor's appointments, providing an efficient and user-friendly platform for both patients and healthcare providers. It also featured a secure payment system using **Stripe** for processing payments.
+I developed a Medicare Web App. This project aimed to streamline the process of booking and managing doctor's appointments, providing an efficient and user-friendly platform for both patients and healthcare providers. It also featured a secure payment system using **Stripe** for processing payments.
 
 ---
 
