@@ -50,11 +50,6 @@ I developed a Medicare Web App. This project aimed to streamline the process of 
 
 ---
 
-## Learning Outcomes  
-- Gained proficiency in full-stack web development by applying concepts learned during the program.  
-- Developed skills in building RESTful APIs, database design, client-side development, and payment integration.  
-- Successfully implemented a real-world project demonstrating the integration of frontend and backend technologies.
-
 ---
 
 ## Conclusion  
