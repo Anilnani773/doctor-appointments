@@ -25,10 +25,6 @@ I developed a Medicare Web App. This project aimed to streamline the process of 
 5. **Mobile-Responsive Design**  
    - Ensures usability across various devices, from desktops to smartphones.  
 
-6. **Payment Integration**  
-   - Patients can make payments for appointments securely using **Stripe**.  
-   - Support for multiple payment methods, including credit and debit cards.  
-
 7. **Notifications**  
    - Automated email notifications for appointment confirmations and reminders.
 
